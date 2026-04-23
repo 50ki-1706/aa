@@ -1,0 +1,30 @@
+使用するコマンド
+
+ls - 部屋の中を確認する。
+出力例: 
+~/ ls
+
+sample1 sample2 sample.txt
+
+cd 〇〇 - 部屋を移動する
+出力例:
+
+~/ cd sample1
+
+~/sample1 cd .. (1つ前の部屋に戻る)
+
+~/
+
+cat 〇〇.txt - テキストの中身を確認する
+出力例:
+
+~/ cat sample.txt
+
+Hello
+
+pwd - 今どの階層にいるかを確認する
+出力例:
+
+~/sample1/sample2 pwd
+
+~/sample1/sample2
