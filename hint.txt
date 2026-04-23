@@ -28,3 +28,10 @@ pwd - 今どの階層にいるかを確認する
 ~/sample1/sample2 pwd
 
 ~/sample1/sample2
+
+.scripts/my-man 〇〇 - コマンドの使い方を表示する
+出力例:
+
+~/ .scripts/my-man ls
+
+ls: ファイルやディレクトリの一覧を表示します。
