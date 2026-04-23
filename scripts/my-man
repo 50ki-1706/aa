@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+cmd="${1:-}"
+
+if [[ -z "$cmd" ]]; then
+  echo "エラー: コマンド名を指定してください。"
+  echo "Usage: my-man <command>"
+  exit 1
+fi
+
+case "$cmd" in
+  ls)
+    cat <<'EOF'
+ls: ファイルやディレクトリの一覧を表示します。
+主なオプション:
+  -l  詳細情報（権限・所有者・更新日時など）を表示
+  -a  隠しファイル（.で始まる名前）も表示
+  -h  -lと組み合わせて容量を読みやすく表示（KB/MBなど）
+例:
+  ls -lah
+EOF
+    ;;
+  cd)
+    cat <<'EOF'
+cd: ディレクトリ（部屋）を移動します。
+基本:
+  cd <dir>   指定したディレクトリへ移動
+  cd ..      1つ上のディレクトリへ戻る
+例:
+  cd floor1
+EOF
+    ;;
+  cat)
+    cat <<'EOF'
+cat: テキストファイルの中身を表示します。
+基本:
+  cat <file>
+例:
+  cat note.txt
+EOF
+    ;;
+  pwd)
+    cat <<'EOF'
+pwd: 現在いるディレクトリの絶対パスを表示します。
+使いどころ:
+  どの階層にいるか分からなくなったときに確認する
+例:
+  pwd
+EOF
+    ;;
+  *)
+    echo "${cmd}: 実装予定です"
+    ;;
+esac
+
+exit 0
